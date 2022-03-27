@@ -5,6 +5,8 @@ design and source-code for bradflaugher.com
 
 ## Homepage
 
+Header/Footer and main design inspiration https://www.fusionfund.com/team/shanewall
+
 ## Bootcamp Page
 
 ### Competitor list (for design inspiration) 
