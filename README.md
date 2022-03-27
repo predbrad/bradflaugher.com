@@ -5,7 +5,16 @@ design and source-code for bradflaugher.com
 
 ## Homepage
 
+## Header/Footer and Responsiveness
+
 Header/Footer and main design inspiration https://www.fusionfund.com/team/shanewall
+
+### Links for footer
+
+* https://angel.co/s/esposito-flaugher/5zTWA
+* https://www.linkedin.com/in/bradflaugher/
+* https://github.com/predbrad/medusa
+* https://calendly.com/bradjf
 
 ## Bootcamp Page
 
