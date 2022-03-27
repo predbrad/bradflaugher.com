@@ -20,7 +20,7 @@ Header/Footer and main design inspiration https://www.fusionfund.com/team/shanew
 
 ### Sample Copy 
 
-[See ](docs/Sample_Copy.docx)
+[see docs/Sample_Copy.docx](docs/Sample_Copy.docx)
 
 ### Competitor list (for design inspiration) 
 * https://www.codesmith.io/
