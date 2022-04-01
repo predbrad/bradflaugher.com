@@ -5,6 +5,8 @@ design and source-code for bradflaugher.com
 
 ## Homepage
 
+Content example https://docs.google.com/document/d/1C3L_7HAA2bU_Jm_NtkFwa069jHeE_wYFDN7Ez8HUtXA/edit
+
 ## Header/Footer and Responsiveness
 
 Header/Footer and main design inspiration https://www.fusionfund.com/team/shanewall
@@ -19,9 +21,10 @@ Header/Footer and main design inspiration https://www.fusionfund.com/team/shanew
 
 ## Bootcamp Page
 
-### Sample Copy 
 
-[see docs/Sample_Copy.docx](docs/Sample_Copy.docx)
+### Content Example
+
+https://docs.google.com/document/d/1ArGiNk1hXUgJdRD_T9pG6pXnahBFQv98Vum9JIRHayw/edit#
 
 ### Competitor list (for design inspiration) 
 * https://www.codesmith.io/
