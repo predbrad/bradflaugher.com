@@ -41,6 +41,13 @@ a {
   }
 }
 
+.mark {
+  padding: 0 5px;
+  &--yellow {
+    background-color: #E7EA4B;
+  }
+}
+
 .header {
   a {
     text-decoration: none;

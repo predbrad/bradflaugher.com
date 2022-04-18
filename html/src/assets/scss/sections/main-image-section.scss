@@ -7,15 +7,24 @@
 
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
 
   @include breakpoint-l-max {
     flex-direction: column-reverse;
     align-items: center;
+
+    .button {
+      min-width: calc(295px - 2*52px - 2px);
+    }
   }
 
   @include breakpoint-xs-max {
     padding: 23px $blocksPadding 56px $blocksPadding;
+
+    .button {
+      min-width: calc(295px - 2*19px - 2px);
+    }
   }
 
   &__col {
