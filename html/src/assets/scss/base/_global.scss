@@ -12,7 +12,7 @@ body {
 
   padding-top: 52px;
 
-  @include breakpoint-md-max {
+  @include breakpoint-sm-max {
     padding-top: 40px;
 
     font-size: 16px;
@@ -25,7 +25,7 @@ p {
   &:not(:last-child) {
     margin-bottom: 18px;
 
-    @include breakpoint-md-max {
+    @include breakpoint-sm-max {
       margin-bottom: 16px;
     }
   }

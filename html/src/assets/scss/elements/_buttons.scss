@@ -41,6 +41,10 @@ a.button, .button {
     border: 1px solid $greenButtonBackgroundColor;
     background-color: $greenButtonBackgroundColor;
 
+    @include breakpoint-xs-max {
+      padding: 16px 19px;
+    }
+
     &:hover {
       color: $greenButtonBackgroundColor;
 

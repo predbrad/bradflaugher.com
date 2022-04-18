@@ -14,6 +14,10 @@
     align-items: center;
   }
 
+  @include breakpoint-xs-max {
+    padding: 23px $blocksPadding 56px $blocksPadding;
+  }
+
   &__col {
 
     &--text {
@@ -31,15 +35,20 @@
 
       .title {
         max-width: 657px;
+
+        @include breakpoint-l-max {
+          margin-top: 40px;
+        }
       }
       .content {
         max-width: 707px;
 
-        @include breakpoint-sm-max {
-          display: flex;
-          flex-direction: column;
+        @include breakpoint-l-max {
+          text-align: center;
+        }
 
-          justify-content: center;
+        p {
+          text-align: left;
         }
       }
     }
@@ -53,20 +62,32 @@
       @include breakpoint-l-max {
         flex: 0 0 100%;
         max-width: 100%;
-        height: 665px;
       }
 
       &:before {
         position: absolute;
+
+        overflow: hidden;
+
         top: -$fluidBlocksPadding;
         right: -$fluidBlocksPadding;
+
+        z-index: -1;
 
         content: url("../img/backgrounds/big-image-background.png");
 
         width: 445px;
         height: 541px;
 
-        z-index: -1;
+        @include breakpoint-sm-max {
+          top: -23px;
+          right: -$blocksPadding;
+
+          width: 238px;
+          height: 303px;
+
+          content: url("../img/backgrounds/big-image-background-mob.png");
+        }
       }
 
       .big-image {
