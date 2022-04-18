@@ -1,0 +1,105 @@
+/**
+ * Footer styles
+ */
+
+.footer {
+  display: flex;
+
+  padding: 92px 0;
+
+  width:100%;
+
+  background: $footerBackgroundColor;
+
+  color: $footerTextColor;
+
+  @include breakpoint-sm-max {
+    padding: 40px 0;
+  }
+
+  a {
+    color: $footerLinkColor;
+  }
+
+  .button {
+    margin-top: 0;
+  }
+
+  &-logo {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.333333333;
+    text-decoration: none;
+
+    @include breakpoint-sm-max {
+      font-size: 24px;
+    }
+
+    &__container {
+      margin-bottom: 30px;
+
+      @include breakpoint-sm-max {
+        text-align: center;
+      }
+    }
+  }
+
+  &__images-list {
+    margin-bottom: 20px;
+
+    @include breakpoint-sm-max {
+      text-align: center;
+    }
+
+    &-item {
+      text-decoration: none;
+      img {
+        width: auto;
+        height: 24px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__menu {
+    font-size: 16px;
+
+    @include breakpoint-sm-max {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    &-item{
+      font-size: 16px;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__col {
+    display: flex;
+
+    &--left {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &--right {
+      justify-content: flex-end;
+    }
+
+    @include breakpoint-sm-max {
+      &--left, &--right {
+        justify-content: center;
+      }
+    }
+  }
+}

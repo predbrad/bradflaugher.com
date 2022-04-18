@@ -1,0 +1,14 @@
+{
+  "header" : [
+    {
+      "label" : "bootcamp",
+      "page" : "bootcamp.html"
+    }
+  ],
+  "footer" : [
+    {
+      "label" : "privacy",
+      "page" : "privacy.html"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+/**
+ * Variables
+ */
+
+//Paddings
+
+$blocksPadding: 13px !default;
+$fluidBlocksPaddingMD: 40px !default;
+$fluidBlocksPadding: 84px !default;
+
+//Breakpoints
+
+$screen-sm: 600px !default;
+$screen-md: 768px !default;
+$screen-lg: 991px !default;
+$screen-l: 1270px !default;
+$screen-xl: 1400px !default;
+
+$screen-xs-max: ($screen-sm - 1) !default;
+$screen-sm-max: ($screen-md - 1) !default;
+$screen-md-max: ($screen-lg - 1) !default;
+$screen-l-max: ($screen-l - 1) !default;
+$screen-lg-max: ($screen-xl - 1) !default;
+
+//Containers
+$container-xs: 100% !default;
+$container-sm: 600px !default;
+$container-md: 720px !default;
+$container-lg: 991px !default;
+$container-xl: 1440px !default;
+
+//Text
+$textColor: black !default;
+$textColorLight: white !default;
+$font: 'Roboto Mono' !default;
+
+//Links
+$linkColor:  #3B28CC !default;
+$linkHoverColor:  #00C908 !default;
+
+//Buttons
+$lightButtonBackgroundColor: transparent !default;
+$lightButtonHoverTextColor: #3B28CC !default;
+$lightButtonHoverBackgroundColor: white !default;
+$lightButtonBorderColor: white !default;
+
+$greenButtonBackgroundColor: #00C908 !default;
+$greenButtonTextColor: #FFFFFF !default;
+$buttonDisabledBackgroundColor: #D9D9D9 !default;
+$buttonDisabledTextColor: #909090 !default;
+
+//Marks
+$markBackgroundColor: #EAE766 !default;
+
+//Menu
+$menuElementsColor: #00C908;
+
+//Header
+$headerBorderColor: #3B28CC !default;
+$headerBackgroundColor: white !default;
+
+//Footer
+$footerTextColor: #FFFFFF !default;
+$footerLinkColor: #FFFFFF !default;
+$footerBackgroundColor: #3B28CC !default;
+
+

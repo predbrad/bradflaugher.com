@@ -1,0 +1,54 @@
+//Breakpoints
+@mixin breakpoint-sm-min {
+  @media only screen and (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md-min {
+  @media only screen and (min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg-min {
+  @media only screen and (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl-min {
+  @media only screen and (min-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xs-max {
+  @media only screen and (max-width: $screen-xs-max) {
+    @content;
+  }
+}
+
+@mixin breakpoint-sm-max {
+  @media only screen and (max-width: $screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md-max {
+  @media only screen and (max-width: $screen-md-max) {
+    @content;
+  }
+}
+
+@mixin breakpoint-l-max {
+  @media only screen and (max-width: $screen-l-max) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg-max {
+  @media only screen and (max-width: $screen-lg-max) {
+    @content;
+  }
+}

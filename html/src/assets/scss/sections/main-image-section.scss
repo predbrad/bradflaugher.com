@@ -1,0 +1,79 @@
+.main-image-section {
+  padding: 84px 0 88px $fluidBlocksPadding;
+
+  @include breakpoint-l-max {
+    padding: 84px 0 88px 0;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include breakpoint-l-max {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  &__col {
+
+    &--text {
+      flex: 0 0 calc(64.93% - 60px);
+      max-width: calc(64.93% - 60px);
+
+      padding-right: 60px;
+
+      @include breakpoint-l-max {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        padding-right: 0;
+      }
+
+      .title {
+        max-width: 657px;
+      }
+      .content {
+        max-width: 707px;
+
+        @include breakpoint-sm-max {
+          display: flex;
+          flex-direction: column;
+
+          justify-content: center;
+        }
+      }
+    }
+
+    &--image {
+      position: relative;
+
+      flex: 0 0 35.07%;
+      max-width: 35.07%;
+
+      @include breakpoint-l-max {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 665px;
+      }
+
+      &:before {
+        position: absolute;
+        top: -$fluidBlocksPadding;
+        right: -$fluidBlocksPadding;
+
+        content: url("../img/backgrounds/big-image-background.png");
+
+        width: 445px;
+        height: 541px;
+
+        z-index: -1;
+      }
+
+      .big-image {
+        max-width: 505px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
