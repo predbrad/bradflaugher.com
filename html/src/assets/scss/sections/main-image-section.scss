@@ -47,7 +47,7 @@
           text-align: center;
         }
 
-        p {
+       h1, h2, h3, h4, h5, h6, p, span {
           text-align: left;
         }
       }
@@ -94,6 +94,33 @@
         max-width: 505px;
         width: 100%;
         height: auto;
+      }
+    }
+  }
+
+  &--l-reverse {
+    @include breakpoint-l-max {
+      flex-direction: column;
+      padding-bottom: 0;
+
+      .main-image-section__col {
+        &--image {
+          margin-top: 71px;
+        }
+      }
+
+
+      .big-image {
+        margin-bottom: -4px;
+      }
+    }
+    @include breakpoint-xs-max {
+      padding-bottom: 0;
+
+      .main-image-section__col {
+        &--image {
+          margin-top: 51px;
+        }
       }
     }
   }
