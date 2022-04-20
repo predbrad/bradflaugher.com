@@ -1,0 +1,86 @@
+$textColPaddingRight: 93px;
+
+.text-video-section {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-l-max {
+    flex-direction: column;
+  }
+
+  &__col {
+    @include breakpoint-l-max {
+      width: 100%;
+
+      flex: 0 0 100%;
+      max-width: 100%;
+
+      padding-right: 0;
+    }
+
+    &--text {
+      flex: 0 0 calc(43.082% - #{$textColPaddingRight});
+      max-width: calc(43.082% - #{$textColPaddingRight});
+
+      padding-right: $textColPaddingRight;
+
+      @include breakpoint-l-max {
+        margin-bottom: 36px;
+      }
+    }
+    &--video {
+      flex: 0 0 56.918%;
+      max-width: 56.918%;
+
+      position:relative;
+      padding-bottom:31.919%;
+      height:0;
+      overflow:hidden;
+
+      //@include breakpoint-xs-max {
+      //  display: flex;
+      //  justify-content: center;
+      //}
+
+      @include breakpoint-l-max {
+        padding-bottom: 40%;
+      }
+
+      @include breakpoint-l-max {
+        padding-bottom: 56.467%;
+      }
+
+      iframe, object, embed {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+      }
+
+      iframe {
+        @include breakpoint-l-max {
+          left: 0;
+          right: 0;
+          margin: auto;
+
+          max-width: 70%;
+        }
+
+        @include breakpoint-l-max {
+          max-width: 100%;
+        }
+      }
+
+      //iframe {
+      //  width: 100%;
+      //  height: 406px;
+      //
+      //  @include breakpoint-xs-max {
+      //    width: 296px;
+      //    height: 166px;
+      //  }
+      //}
+    }
+  }
+}

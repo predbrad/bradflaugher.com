@@ -22,12 +22,13 @@ body {
 p {
   margin-top: 0;
 
-  &:not(:last-child) {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 
-    @include breakpoint-sm-max {
-      margin-bottom: 16px;
-    }
+  @include breakpoint-sm-max {
+    margin-bottom: 16px;
+  }
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
