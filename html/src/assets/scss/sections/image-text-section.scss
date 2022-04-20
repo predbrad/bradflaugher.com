@@ -1,0 +1,92 @@
+.image-text-section {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-l-max {
+    flex-direction: column;
+
+    .button {
+      min-width: calc(295px - 2*52px - 2px);
+    }
+  }
+
+  @include breakpoint-xs-max {
+    align-items: flex-start;
+  }
+
+  &__col {
+    &--image {
+      margin-left: -$fluidBlocksPadding;
+      padding-right: 73px;
+
+      flex: 0 0 calc(50% - 73px);
+      max-width: calc(50% - 73px);
+
+      @include breakpoint-l-max {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        margin-left: 0;
+        margin-bottom: 24px;
+
+        padding-right: 0;
+      }
+
+      @include breakpoint-xs-max {
+        margin-left: -$blocksPadding;
+
+        width: calc(100% + #{$blocksPadding});
+        max-width: calc(100% + #{$blocksPadding});
+      }
+
+      .big-image {
+        max-width: 505px;
+        width: 100%;
+        height: auto;
+
+        @include breakpoint-xs-max {
+          max-width: 100%;
+        }
+      }
+    }
+    &--text {
+      flex: 0 0 calc(50% + #{$fluidBlocksPadding} + 4px);
+      max-width: calc(50% + #{$fluidBlocksPadding} + 4px);
+
+      @include breakpoint-l-max {
+        width: 100%;
+
+        flex: 0 0 100%;
+        max-width: $imagesSectionsMaxTextWidth;
+
+      }
+
+      .title {
+        @include breakpoint-l-max {
+          position: absolute;
+          top:0;
+          left: 0;
+          right: 0;
+
+          margin: 0 auto 24px auto;
+
+          max-width: $imagesSectionsMaxTextWidth;
+        }
+
+        @include breakpoint-xs-max {
+          left: $blocksPadding;
+        }
+
+        h2 {
+          @include breakpoint-xs-max {
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

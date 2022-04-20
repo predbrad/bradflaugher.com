@@ -29,15 +29,23 @@
 
   &__col {
 
+    br {
+      @include breakpoint-xs-max {
+        display: none;
+      }
+    }
+
     &--text {
-      flex: 0 0 calc(64.93% - 60px);
-      max-width: calc(64.93% - 60px);
+      flex: 0 0 calc(60.298% - 60px);
+      max-width: calc(60.298% - 60px);
 
       padding-right: 60px;
 
       @include breakpoint-l-max {
+        width: 100%;
+
         flex: 0 0 100%;
-        max-width: 100%;
+        max-width: $imagesSectionsMaxTextWidth;
 
         padding-right: 0;
       }
@@ -47,6 +55,7 @@
 
         @include breakpoint-l-max {
           margin-top: 40px;
+          max-width: 100%;
         }
       }
       .content {
@@ -54,9 +63,10 @@
 
         @include breakpoint-l-max {
           text-align: center;
+          max-width: 100%;
         }
 
-       h1, h2, h3, h4, h5, h6, p, span {
+        h1, h2, h3, h4, h5, h6, p, span {
           text-align: left;
         }
       }
@@ -65,13 +75,21 @@
     &--image {
       position: relative;
 
-      flex: 0 0 35.07%;
-      max-width: 35.07%;
+      flex: 0 0 39.702%;
+      max-width: 39.702%;
 
       @include breakpoint-l-max {
         flex: 0 0 100%;
         max-width: 100%;
       }
+
+      //@include breakpoint-md-max {
+      //  display: flex;
+      //  justify-content: center;
+      //  flex-direction: column;
+      //
+      //  width: 100%;
+      //}
 
       &:before {
         position: absolute;
@@ -88,7 +106,7 @@
         width: 445px;
         height: 541px;
 
-        @include breakpoint-sm-max {
+        @include breakpoint-xs-max {
           top: -23px;
           right: -$blocksPadding;
 
@@ -103,6 +121,10 @@
         max-width: 505px;
         width: 100%;
         height: auto;
+
+        //@include breakpoint-md-max {
+        //  max-width: unset;
+        //}
       }
     }
   }
@@ -110,25 +132,62 @@
   &--l-reverse {
     @include breakpoint-l-max {
       flex-direction: column;
-      padding-bottom: 0;
 
       .main-image-section__col {
         &--image {
-          margin-top: 71px;
+          margin-top: 138px;
+        }
+        &--text {
+          .title {
+            margin-top: 0;
+          }
         }
       }
-
 
       .big-image {
         margin-bottom: -4px;
       }
     }
     @include breakpoint-xs-max {
-      padding-bottom: 0;
+      padding: 29px $blocksPadding 56px $blocksPadding;
 
       .main-image-section__col {
         &--image {
           margin-top: 51px;
+        }
+      }
+    }
+  }
+
+  &--l-no-padding-bottom {
+    @include breakpoint-l-max {
+      padding-bottom: 0;
+    }
+    @include breakpoint-xs-max {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.page-404 {
+  .main-image-section {
+    &__col {
+      &--text {
+        @include breakpoint-l-max {
+          width: unset;
+        }
+      }
+      &--image {
+        &:before {
+          @include breakpoint-l-max {
+            top: -23px;
+            right: -$blocksPadding;
+
+            width: 238px;
+            height: 303px;
+
+            content: url("../img/backgrounds/big-image-background-mob.png");
+          }
         }
       }
     }

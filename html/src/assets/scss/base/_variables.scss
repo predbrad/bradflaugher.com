@@ -27,7 +27,7 @@ $container-xs: 100% !default;
 $container-sm: 600px !default;
 $container-md: 720px !default;
 $container-lg: 991px !default;
-$container-xl: 1440px !default;
+$container-xl: 1272px !default;
 
 //Text
 $textColor: black !default;
@@ -63,5 +63,8 @@ $headerBackgroundColor: white !default;
 $footerTextColor: #FFFFFF !default;
 $footerLinkColor: #FFFFFF !default;
 $footerBackgroundColor: #3B28CC !default;
+
+//Images sections
+$imagesSectionsMaxTextWidth: 592px;
 
 
