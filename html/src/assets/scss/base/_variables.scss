@@ -4,7 +4,8 @@
 
 //Paddings
 
-$blocksPadding: 13px !default;
+$blocksPadding: 21px !default;
+$fluidBlocksPaddingXS: 13px !default;
 $fluidBlocksPaddingMD: 40px !default;
 $fluidBlocksPadding: 84px !default;
 
@@ -24,7 +25,7 @@ $screen-lg-max: ($screen-xl - 1) !default;
 
 //Containers
 $container-xs: 100% !default;
-$container-sm: 600px !default;
+$container-sm: 574px !default;
 $container-md: 720px !default;
 $container-lg: 991px !default;
 $container-xl: 1272px !default;

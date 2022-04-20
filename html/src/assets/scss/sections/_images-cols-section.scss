@@ -1,0 +1,37 @@
+.images-cols-section {
+  @include breakpoint-sm-max {
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    @include breakpoint-sm-max {
+      max-width: 296px;
+
+      &:not(:last-child) {
+        margin-bottom: 42px;
+      }
+    }
+
+    .item-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 118px;
+
+      img {
+        width: auto;
+        max-height: 100%;
+      }
+    }
+
+    .item-text {
+      margin-top: 16px;
+    }
+  }
+}
