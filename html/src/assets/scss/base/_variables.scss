@@ -1,16 +1,18 @@
 /**
  * Variables
  */
+//Colors
+$greenColor: #00C908 !default;
+$blueColor: #3B28CC !default;
+$yellowColor: #EAE766 !default;
 
 //Paddings
-
 $blocksPadding: 21px !default;
 $fluidBlocksPaddingXS: 13px !default;
 $fluidBlocksPaddingMD: 40px !default;
 $fluidBlocksPadding: 84px !default;
 
 //Breakpoints
-
 $screen-sm: 600px !default;
 $screen-md: 768px !default;
 $screen-lg: 991px !default;
@@ -36,34 +38,34 @@ $textColorLight: white !default;
 $font: 'Roboto Mono' !default;
 
 //Links
-$linkColor:  #3B28CC !default;
-$linkHoverColor:  #00C908 !default;
+$linkColor:  $blueColor;
+$linkHoverColor:  $greenColor;
 
 //Buttons
 $lightButtonBackgroundColor: transparent !default;
-$lightButtonHoverTextColor: #3B28CC !default;
+$lightButtonHoverTextColor: $blueColor;
 $lightButtonHoverBackgroundColor: white !default;
 $lightButtonBorderColor: white !default;
 
-$greenButtonBackgroundColor: #00C908 !default;
+$greenButtonBackgroundColor: $greenColor;
 $greenButtonTextColor: #FFFFFF !default;
 $buttonDisabledBackgroundColor: #D9D9D9 !default;
 $buttonDisabledTextColor: #909090 !default;
 
 //Marks
-$markBackgroundColor: #EAE766 !default;
+$markBackgroundColor: $yellowColor;
 
 //Menu
 $menuElementsColor: #00C908;
 
 //Header
-$headerBorderColor: #3B28CC !default;
+$headerBorderColor: $blueColor;
 $headerBackgroundColor: white !default;
 
 //Footer
 $footerTextColor: #FFFFFF !default;
 $footerLinkColor: #FFFFFF !default;
-$footerBackgroundColor: #3B28CC !default;
+$footerBackgroundColor: $blueColor;
 
 //Images sections
 $imagesSectionsMaxTextWidth: 592px;
