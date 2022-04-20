@@ -35,10 +35,10 @@
       }
 
       @include breakpoint-xs-max {
-        margin-left: -$blocksPadding;
+        margin-left: -$fluidBlocksPaddingXS;
 
-        width: calc(100% + #{$blocksPadding});
-        max-width: calc(100% + #{$blocksPadding});
+        width: calc(100% + #{$fluidBlocksPaddingXS});
+        max-width: calc(100% + #{$fluidBlocksPaddingXS});
       }
 
       .big-image {
@@ -76,7 +76,7 @@
         }
 
         @include breakpoint-xs-max {
-          left: $blocksPadding;
+          left: $fluidBlocksPaddingXS;
         }
 
         h2 {

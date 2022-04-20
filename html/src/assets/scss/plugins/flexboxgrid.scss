@@ -12,10 +12,10 @@
 .container-fluid {
     max-width: $container-xl;
 
-    padding-right: $blocksPadding;
-    padding-left: $blocksPadding;
+    padding-right: $fluidBlocksPaddingXS;
+    padding-left: $fluidBlocksPaddingXS;
 
-    width: calc(100% - #{2*$blocksPadding});
+    width: calc(100% - #{2*$fluidBlocksPaddingXS});
 
     @include breakpoint-md-min {
         padding-right: $fluidBlocksPaddingMD;
@@ -33,9 +33,9 @@
 }
 
 .container {
-    width: $container-xs;
-    padding-right: $blocksPadding;
-    padding-left: $blocksPadding;
+    width: calc(100% - #{2*$fluidBlocksPaddingXS});
+    padding-right: $fluidBlocksPaddingXS;
+    padding-left: $fluidBlocksPaddingXS;
 }
 
 .row {
@@ -333,8 +333,8 @@
         -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
+        padding-right: $fluidBlocksPaddingXS;
+        padding-left: $fluidBlocksPaddingXS;
     }
 
     .col-sm {

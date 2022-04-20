@@ -20,7 +20,7 @@
   }
 
   @include breakpoint-xs-max {
-    padding: 23px $blocksPadding 56px $blocksPadding;
+    padding: 23px $fluidBlocksPaddingXS 56px $fluidBlocksPaddingXS;
 
     .button {
       min-width: calc(295px - 2*19px - 2px);
@@ -106,9 +106,13 @@
         width: 445px;
         height: 541px;
 
+        @include breakpoint-sm-max {
+          right: -53px;
+        }
+
         @include breakpoint-xs-max {
           top: -23px;
-          right: -$blocksPadding;
+          right: -$fluidBlocksPaddingXS;
 
           width: 238px;
           height: 303px;
@@ -149,7 +153,7 @@
       }
     }
     @include breakpoint-xs-max {
-      padding: 29px $blocksPadding 56px $blocksPadding;
+      padding: 29px $fluidBlocksPaddingXS 56px $fluidBlocksPaddingXS;
 
       .main-image-section__col {
         &--image {
@@ -181,7 +185,7 @@
         &:before {
           @include breakpoint-l-max {
             top: -23px;
-            right: -$blocksPadding;
+            right: -$fluidBlocksPaddingXS;
 
             width: 238px;
             height: 303px;
