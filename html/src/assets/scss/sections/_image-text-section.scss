@@ -59,7 +59,7 @@
         width: 100%;
 
         flex: 0 0 100%;
-        max-width: $imagesSectionsMaxTextWidth;
+        max-width: 100%;
 
       }
 
@@ -72,7 +72,7 @@
 
           margin: 0 auto 24px auto;
 
-          max-width: $imagesSectionsMaxTextWidth;
+          max-width: calc(100% - #{$fluidBlocksPaddingMD}*2);
         }
 
         @include breakpoint-xs-max {
@@ -80,8 +80,12 @@
         }
 
         h2 {
-          @include breakpoint-xs-max {
-            br {
+          @include breakpoint-l-max {
+            text-align: center;
+          }
+
+          br {
+            @include breakpoint-l-max {
               display: none;
             }
           }
