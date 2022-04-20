@@ -1,16 +1,13 @@
 .images-cols-section {
-  @include breakpoint-sm-max {
-    .row {
-      flex-direction: column;
-      align-items: center;
-    }
+  &__row {
+    justify-content: center;
   }
 
   &__item {
     text-align: center;
 
-    @include breakpoint-sm-max {
-      max-width: 296px;
+    @include breakpoint-xs-max {
+      width: 296px;
 
       &:not(:last-child) {
         margin-bottom: 42px;
