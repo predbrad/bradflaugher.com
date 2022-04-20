@@ -27,6 +27,14 @@ $textColPaddingRight: 93px;
       @include breakpoint-l-max {
         margin-bottom: 36px;
       }
+
+      .content {
+        max-width: 396px;
+
+        @include breakpoint-l-max {
+          max-width: unset;
+        }
+      }
     }
     &--video {
       flex: 0 0 56.918%;
@@ -36,11 +44,6 @@ $textColPaddingRight: 93px;
       padding-bottom:31.919%;
       height:0;
       overflow:hidden;
-
-      //@include breakpoint-xs-max {
-      //  display: flex;
-      //  justify-content: center;
-      //}
 
       @include breakpoint-l-max {
         padding-bottom: 40%;
@@ -71,16 +74,6 @@ $textColPaddingRight: 93px;
           max-width: 100%;
         }
       }
-
-      //iframe {
-      //  width: 100%;
-      //  height: 406px;
-      //
-      //  @include breakpoint-xs-max {
-      //    width: 296px;
-      //    height: 166px;
-      //  }
-      //}
     }
   }
 }
