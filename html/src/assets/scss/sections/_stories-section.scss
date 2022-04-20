@@ -1,0 +1,47 @@
+.stories-section {
+  &__row{
+    justify-content: center;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  .item {
+    &-container {
+      padding: 24px;
+
+      border: 2px solid $greenColor;
+      border-radius: 24px;
+
+      @include breakpoint-sm-max {
+        padding: 16px 12px 20px 16px;
+      }
+    }
+
+    &-people {
+      display: flex;
+
+      a {
+        font-size: 14px;
+        line-height: 1.285714286;
+      }
+
+      &__image {
+        margin-right: 18px;
+      }
+    }
+
+    &-text {
+      font-size: 16px;
+      line-height: 1.3125;
+      min-height: 138px;
+
+      margin-top: 16px;
+
+      @include breakpoint-sm-max {
+        min-height: unset;
+      }
+    }
+  }
+}

@@ -68,6 +68,18 @@ a {
   }
 }
 
+.section-title {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 86px;
+
+    @include breakpoint-sm-max {
+      margin-bottom: 36px;
+    }
+  }
+}
+
 #section-1 {
   display: flex;
   align-items: center;
