@@ -81,6 +81,20 @@ a {
   }
 }
 
+.main {
+  section {
+    margin-bottom: 230px;
+
+    @include breakpoint-md-max {
+      margin-bottom: 78px
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 #section-1 {
   display: flex;
   align-items: center;

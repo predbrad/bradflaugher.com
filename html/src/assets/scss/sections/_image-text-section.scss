@@ -77,11 +77,17 @@
 
         @include breakpoint-xs-max {
           left: $fluidBlocksPaddingXS;
+
+          max-width: unset;
         }
 
         h2 {
           @include breakpoint-l-max {
             text-align: center;
+          }
+
+          @include breakpoint-xs-max {
+            text-align: left;
           }
 
           br {

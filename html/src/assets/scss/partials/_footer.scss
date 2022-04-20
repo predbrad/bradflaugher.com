@@ -7,6 +7,8 @@
 
   padding: 92px 0;
 
+  margin-top: 200px;
+
   width:100%;
 
   background: $footerBackgroundColor;
@@ -15,6 +17,8 @@
 
   @include breakpoint-sm-max {
     padding: 40px 0;
+
+    margin-top: 78px;
   }
 
   a {

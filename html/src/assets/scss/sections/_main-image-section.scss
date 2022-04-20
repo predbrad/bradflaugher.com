@@ -1,8 +1,8 @@
 .main-image-section {
-  padding: 84px 0 88px $fluidBlocksPadding;
+  padding: 84px 0 0 $fluidBlocksPadding;
 
   @include breakpoint-l-max {
-    padding: 84px 0 88px 0;
+    padding-left: 0;
   }
 
   display: flex;
