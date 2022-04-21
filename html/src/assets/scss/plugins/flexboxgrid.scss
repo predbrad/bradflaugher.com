@@ -304,7 +304,7 @@
 
 @include breakpoint-sm-min {
     .container {
-        width: $container-sm;
+        width: calc(#{$container-sm} - #{2*$fluidBlocksPaddingXS});
     }
 
     .col-sm,
@@ -535,7 +535,7 @@
 
 @include breakpoint-md-min {
     .container {
-        width: $container-md;
+        width: calc(#{$container-md} - #{2*$blocksPadding});
     }
 
     .col-md,
@@ -766,7 +766,7 @@
 
 @include breakpoint-lg-min {
     .container {
-        width: $container-lg;
+        width: calc(#{$container-lg} - #{2*$blocksPadding});
     }
 
     .col-lg,
@@ -996,7 +996,7 @@
 }
 @include breakpoint-xl-min {
     .container {
-        width: $container-xl;
+        width: calc(#{$container-xl} - #{2*$blocksPadding});
     }
 
     .col-xl,
