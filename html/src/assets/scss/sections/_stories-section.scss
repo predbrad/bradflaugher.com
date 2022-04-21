@@ -25,6 +25,12 @@
       a {
         font-size: 14px;
         line-height: 1.285714286;
+
+        @include breakpoint-md-max {
+          span {
+            display: none;
+          }
+        }
       }
 
       &__image {
