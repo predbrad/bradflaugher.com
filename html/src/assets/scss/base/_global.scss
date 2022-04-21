@@ -82,6 +82,8 @@ a {
 }
 
 .main {
+  min-height: 380px;
+
   section {
     margin-bottom: 230px;
 
@@ -103,6 +105,9 @@ a {
       @include breakpoint-md-max {
         margin-bottom: 78px
       }
+    }
+    &:first-child:not(.main-image-section) {
+      margin-top: 50px;
     }
 
     &:last-child {
