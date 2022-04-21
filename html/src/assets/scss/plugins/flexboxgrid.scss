@@ -53,6 +53,9 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 
+    margin-right: -$fluidBlocksPaddingXS;
+    margin-left: -$fluidBlocksPaddingXS;
+
     @include breakpoint-md-min {
         margin-right: -$blocksPadding;
         margin-left: -$blocksPadding;
@@ -103,8 +106,9 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: $blocksPadding;
-    padding-left: $blocksPadding;
+
+    padding-right: $fluidBlocksPaddingXS;
+    padding-left: $fluidBlocksPaddingXS;
 }
 
 .col-xs {
