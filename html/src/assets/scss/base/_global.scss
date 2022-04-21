@@ -89,6 +89,22 @@ a {
       margin-bottom: 78px
     }
 
+    &.images-cols-section {
+      margin-bottom: 260px;
+
+      @include breakpoint-md-max {
+        margin-bottom: 100px
+      }
+    }
+
+    &.stories-section {
+      margin-bottom: 260px;
+
+      @include breakpoint-md-max {
+        margin-bottom: 78px
+      }
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
