@@ -166,7 +166,12 @@ function getChart(canvasObject, dataX, dataY, labelX, labelY) {
                     color: chartConfig.dataLabels.color,
                     anchor: chartConfig.dataLabels.anchor,
                     align: chartConfig.dataLabels.align,
-                    offset: chartConfig.dataLabels.offset
+                    offset: chartConfig.dataLabels.offset,
+                    formatter: function( val ) {
+                        const $str = val.trim();
+
+                        return '$' + $str + 'k';
+                    },
                 }
             },
             events: [],
