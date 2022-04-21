@@ -1,22 +1,3 @@
-function getChartsData() {
-    return [
-        {   id: 'bootcamp-bar-chart',
-            axisLabels: {
-                x: 'Years of Experience',
-                y: 'Annual Total Compensation'
-            },
-            data: [
-                {   x:'< 1',       y:78     },
-                {   x:'1-4',       y:88     },
-                {   x:'5-9',       y:105    },
-                {   x:'10-19',     y:117    },
-                {   x:'20+',       y:118    },
-
-            ]
-        }
-    ];
-}
-
 function getChartsConfig() {
 
     const globalValues = {
@@ -108,9 +89,7 @@ function getChartsConfig() {
     return $output
 }
 
-function getChart(chartData) {
-
-    const canvasObject = document.getElementById(chartData.id);
+function getChart(canvasObject, dataX, dataY, labelX, labelY) {
 
     if (!canvasObject) return;
 
@@ -121,11 +100,12 @@ function getChart(chartData) {
     new Chart(chartObject, {
         type: 'bar',
         data: {
+            labels: dataX,
             datasets: [{
                 label: false,
                 backgroundColor: chartConfig.bars.color,
                 barPercentage: chartConfig.bars.barPercentage,
-                data: chartData.data,
+                data: dataY,
             }]
         },
         plugins: [
@@ -142,7 +122,7 @@ function getChart(chartData) {
                     },
                     title: {
                         display: true,
-                        text: chartData.axisLabels.x,
+                        text: labelX,
                         color: chartConfig.axis.x.labelsColor,
                         font: chartConfig.font,
                         padding: chartConfig.axis.x.padding
@@ -157,7 +137,7 @@ function getChart(chartData) {
                     drawBorder: false,
                     title: {
                         display: true,
-                        text: chartData.axisLabels.y,
+                        text: labelY,
                         color: chartConfig.axis.y.labelColor,
                         font: chartConfig.font,
                         padding: chartConfig.axis.y.padding
@@ -186,10 +166,7 @@ function getChart(chartData) {
                     color: chartConfig.dataLabels.color,
                     anchor: chartConfig.dataLabels.anchor,
                     align: chartConfig.dataLabels.align,
-                    offset: chartConfig.dataLabels.offset,
-                    formatter: ( val ) => {
-                        return '$' + val.y + 'k';
-                    },
+                    offset: chartConfig.dataLabels.offset
                 }
             },
             events: [],
@@ -198,14 +175,27 @@ function getChart(chartData) {
 }
 
 function getCharts() {
-    const chartCanvas = document.getElementsByClassName('chart-canvas');
+    const chartsCanvas = document.getElementsByClassName('chart-section__canvas');
 
-    if (chartCanvas.length > 0) {
-        const chartData = getChartsData();
+    if (chartsCanvas.length > 0) {
 
-        if (chartData.length > 0) {
-            for (let $i = 0; $i < chartData.length; $i++) {
-                getChart(chartData[$i]);
+        for (let $i = 0; $i < chartsCanvas.length; $i++) {
+            let $dataX = chartsCanvas[$i].getAttribute('data-x-values')
+                            ? chartsCanvas[$i].getAttribute('data-x-values').split(',')
+                            : false;
+            let $dataY = chartsCanvas[$i].getAttribute('data-y-values')
+                            ? chartsCanvas[$i].getAttribute('data-y-values').split(',')
+                            : false;
+
+            let $labelX = chartsCanvas[$i].getAttribute('data-x-label')
+                            ? chartsCanvas[$i].getAttribute('data-x-label')
+                            : '';
+            let $labelY = chartsCanvas[$i].getAttribute('data-y-label')
+                            ? chartsCanvas[$i].getAttribute('data-y-label')
+                            : '';
+
+            if ( $dataX && $dataY) {
+                getChart( chartsCanvas[$i], $dataX, $dataY, $labelX, $labelY )
             }
         }
     }
