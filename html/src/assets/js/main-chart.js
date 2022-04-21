@@ -20,6 +20,8 @@ function getChartsData() {
 function getChartsConfig() {
 
     const globalValues = {
+        fontFamily: 'Roboto Mono',
+        fontWeight: 400,
         labelsColor: '#646464',
         ticksColor: '#000000',
         mobileWidth: 600
@@ -29,9 +31,9 @@ function getChartsConfig() {
     if (isViewPortMaxWidth(globalValues.mobileWidth)) {
         $output = {
             font: {
-                family: 'Roboto Mono',
+                family: globalValues.fontFamily,
                 size: 10,
-                weight: '400',
+                weight: globalValues.fontWeight,
                 lineHeight: 1.3
             },
             bars: {
@@ -54,9 +56,9 @@ function getChartsConfig() {
     } else {
         $output = {
             font: {
-                family: 'Roboto Mono',
+                family: globalValues.fontFamily,
                 size: 16,
-                weight: '400',
+                weight: globalValues.fontWeight,
                 lineHeight: 1.3125
             },
             bars: {
@@ -149,7 +151,7 @@ function getChart(chartData) {
                     display: false
                 },
                 tooltip: {
-                    enabled: true
+                    enabled: false
                 }
             }
         }
