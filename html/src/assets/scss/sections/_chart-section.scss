@@ -1,3 +1,11 @@
 .chart-section {
   max-width: 1003px;
+
+  &__container {
+    height: 511px;
+
+    @include breakpoint-xs-max {
+      height: 415px;
+    }
+  }
 }

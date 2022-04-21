@@ -1,38 +1,109 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const chartConfig = {
-        barColor: '#FFC000',
+function getChartsData() {
+    return [
+        {   id: 'bootcamp-bar-chart',
+            axisLabels: {
+                x: 'Years of Experience',
+                y: 'Annual Total Compensation'
+            },
+            data: [
+                {   x:'< 1',       y:78     },
+                {   x:'1-4',       y:88     },
+                {   x:'5-9',       y:105    },
+                {   x:'10-19',     y:117    },
+                {   x:'20+',       y:118    },
+
+            ]
+        }
+    ];
+}
+
+function getChartsConfig() {
+
+    const globalValues = {
         labelsColor: '#646464',
         ticksColor: '#000000',
-        font: {
-            family: 'Roboto Mono',
-            size: 16,
-            weight: '400',
-            lineHeight: 1.3125
+        mobileWidth: 600
+    }
+
+    let $output;
+    if (isViewPortMaxWidth(globalValues.mobileWidth)) {
+        $output = {
+            font: {
+                family: 'Roboto Mono',
+                size: 10,
+                weight: '400',
+                lineHeight: 1.3
+            },
+            bars: {
+                barPercentage: 0.7,
+                color: '#FFC000'
+            },
+            axis: {
+                x: {
+                    labelsColor: globalValues.labelsColor,
+                    ticksColor: '#000000',
+                    padding: 8
+                },
+                y: {
+                    labelsColor: globalValues.labelsColor,
+                    ticksColor: globalValues.ticksColor,
+                    padding: 8
+                }
+            }
         }
-    };
-    const chartData = {
-        labels: {
-            x: 'Years of Experience',
-            y: 'Annual Total Compensation'
-        },
-        values: {
-            x: ['< 1', '1-4', '5-9', '10-19', '20+'],
-            y: [78, 88, 105, 117, 118]
+    } else {
+        $output = {
+            font: {
+                family: 'Roboto Mono',
+                size: 16,
+                weight: '400',
+                lineHeight: 1.3125
+            },
+            bars: {
+                barPercentage: 0.55,
+                color: '#FFC000'
+            },
+            axis: {
+                x: {
+                    labelsColor: globalValues.labelsColor,
+                    ticksColor: globalValues.ticksColor,
+                    padding: 21
+                },
+                y: {
+                    labelsColor: globalValues.labelsColor,
+                    ticksColor: globalValues.ticksColor,
+                    padding: 32
+                }
+            }
         }
-    };
-    const myChart = new Chart(ctx, {
+    }
+
+    return $output
+}
+
+function getChart(chartData) {
+
+    const canvasObject = document.getElementById(chartData.id);
+
+    if (!canvasObject) return;
+
+    const chartObject = canvasObject.getContext('2d');
+
+    const chartConfig = getChartsConfig();
+
+    new Chart(chartObject, {
         type: 'bar',
         data: {
-            labels: chartData.values.x,
             datasets: [{
                 label: false,
-                data: chartData.values.y,
-                backgroundColor: chartConfig.barColor,
-                width: 5
+                backgroundColor: chartConfig.bars.color,
+                barPercentage: chartConfig.bars.barPercentage,
+                data: chartData.data,
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 x: {
                     grid: {
@@ -41,28 +112,30 @@ document.addEventListener('DOMContentLoaded', function (event) {
                     },
                     title: {
                         display: true,
-                        text: chartData.labels.x,
-                        color: chartConfig.labelsColor,
-                        font: chartConfig.font
+                        text: chartData.axisLabels.x,
+                        color: chartConfig.axis.x.labelsColor,
+                        font: chartConfig.font,
+                        padding: chartConfig.axis.x.padding
                     },
                     ticks: {
-                        color: chartConfig.ticksColor,
+                        color: chartConfig.axis.x.ticksColor,
                         font: chartConfig.font,
                     }
                 },
                 y: {
-                    beginAtZero: true,
+                    beginAtZero: false,
                     drawBorder: false,
                     title: {
                         display: true,
-                        text: chartData.labels.y,
-                        color: chartConfig.labelColor,
+                        text: chartData.axisLabels.y,
+                        color: chartConfig.axis.y.labelColor,
                         font: chartConfig.font,
+                        padding: chartConfig.axis.y.padding
                     },
                     ticks: {
-                        color: chartConfig.ticksColor,
+                        color: chartConfig.axis.y.ticksColor,
                         font: chartConfig.font,
-                        callback: function callback(val, index) {
+                        callback: function callback(val) {
                             return '$' + val + 'k';
                         }
                     }
@@ -81,4 +154,26 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }
         }
     });
+}
+
+function getCharts() {
+    const chartCanvas = document.getElementsByClassName('chart-canvas');
+
+    if (chartCanvas.length > 0) {
+        const chartData = getChartsData();
+
+        if (chartData.length > 0) {
+            for (let $i = 0; $i < chartData.length; $i++) {
+                getChart(chartData[$i]);
+            }
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    getCharts();
 })
+
+window.addEventListener('resize',function() {
+    // getCharts();
+});
