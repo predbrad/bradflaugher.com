@@ -24,6 +24,7 @@ function getChartsConfig() {
         fontWeight: 400,
         labelsColor: '#646464',
         ticksColor: '#000000',
+        dataLabelsColor: '#000000',
         mobileWidth: 600
     }
 
@@ -51,6 +52,18 @@ function getChartsConfig() {
                     ticksColor: globalValues.ticksColor,
                     padding: 8
                 }
+            },
+            dataLabels: {
+                font: {
+                    family: globalValues.fontFamily,
+                    size: 12,
+                    weight: globalValues.fontWeight,
+                    lineHeight: 1.333333333
+                },
+                color: globalValues.dataLabelsColor,
+                anchor: 'end',
+                align: 'top',
+                offset: 4
             }
         }
     } else {
@@ -76,6 +89,18 @@ function getChartsConfig() {
                     ticksColor: globalValues.ticksColor,
                     padding: 32
                 }
+            },
+            dataLabels: {
+                font: {
+                    family: globalValues.fontFamily,
+                    size: 20,
+                    weight: globalValues.fontWeight,
+                    lineHeight: 1.3
+                },
+                color: globalValues.dataLabelsColor,
+                anchor: 'end',
+                align: 'top',
+                offset: 8
             }
         }
     }
@@ -103,6 +128,9 @@ function getChart(chartData) {
                 data: chartData.data,
             }]
         },
+        plugins: [
+            ChartDataLabels
+        ],
         options: {
             responsive: true,
             maintainAspectRatio: false,
@@ -152,9 +180,20 @@ function getChart(chartData) {
                 },
                 tooltip: {
                     enabled: false
+                },
+                datalabels: {
+                    font: chartConfig.dataLabels.font,
+                    color: chartConfig.dataLabels.color,
+                    anchor: chartConfig.dataLabels.anchor,
+                    align: chartConfig.dataLabels.align,
+                    offset: chartConfig.dataLabels.offset,
+                    formatter: ( val ) => {
+                        return '$' + val.y + 'k';
+                    },
                 }
-            }
-        }
+            },
+            events: [],
+        },
     });
 }
 
