@@ -164,10 +164,10 @@ function images() {
                     { interlaced: true }
                 ),
                 imageMin.mozjpeg(
-                    { quality: 75, progressive: true }
+                    { quality: 100, progressive: true }
                 ),
                 imageMin.optipng(
-                    { optimizationLevel: 5 }
+                    { optimizationLevel: 3 }
                 ),
                 imageMin.svgo({
                     plugins: [
