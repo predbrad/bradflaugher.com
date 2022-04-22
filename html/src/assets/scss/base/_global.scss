@@ -48,6 +48,12 @@ a {
   &--yellow {
     background-color: #E7EA4B;
   }
+
+  &--no-xs {
+    @include breakpoint-xs-max {
+      background-color: transparent;
+    }
+  }
 }
 
 .no-wrap {
