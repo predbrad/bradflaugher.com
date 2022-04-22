@@ -49,6 +49,7 @@ const plumber = require('gulp-plumber')
 const panini = require('panini')
 const babel = require('gulp-babel')
 const imageMin = require('gulp-imagemin')
+const htmlMin = require('gulp-htmlmin');
 
 function browserSyncF() {
     browserSync.init({
@@ -82,6 +83,15 @@ function html() {
             .pipe(dest(path.build.html))
             .pipe(browserSync.stream())
     )
+}
+
+function htmlMinimize () {
+    return gulp.src(path.build.html + '*.html')
+        .pipe(htmlMin({
+            collapseWhitespace: true,
+            removeComments: true
+        }))
+        .pipe(dest(path.build.html));
 }
 
 function paniniRefresh() {
@@ -199,6 +209,16 @@ let build = series(
         images
     )
 )
+let build_prod = series(
+    clean,
+    parallel(
+        js,
+        css,
+        html,
+        images
+    ),
+    htmlMinimize
+)
 let watch = series(
     parallel(
         build ,
@@ -212,4 +232,5 @@ exports.js = js
 exports.css = css
 exports.html = html
 exports.build = build
+exports.build = build_prod
 exports.default = watch

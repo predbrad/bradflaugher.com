@@ -17,10 +17,7 @@
     "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.2.4",
     "browser-sync": "^2.26.14",
-    "utf-8-validate": "^5.0.2",
-    "ws": "^8.2.3",
     "bufferutil": "^4.0.1",
-    "webpack": "^5.70.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -28,6 +25,8 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-file-include": "^2.3.0",
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
@@ -37,6 +36,8 @@
     "gulp-uglify-es": "^2.0.0",
     "install-peers": "^1.0.3",
     "panini": "^1.7.1",
-    "gulp-imagemin": "^7.1.0"
+    "utf-8-validate": "^5.0.2",
+    "webpack": "^5.70.0",
+    "ws": "^8.2.3"
   }
 }
