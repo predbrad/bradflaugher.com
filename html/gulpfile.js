@@ -232,5 +232,5 @@ exports.js = js
 exports.css = css
 exports.html = html
 exports.build = build
-exports.build = build_prod
+exports.build_prod = build_prod
 exports.default = watch
