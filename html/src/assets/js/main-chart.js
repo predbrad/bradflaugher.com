@@ -89,7 +89,8 @@ function getChartsConfig() {
     return $output
 }
 
-function getChart(canvasObject, dataX, dataY, labelX, labelY) {
+function getChartV3(canvasObject, dataX, dataY, labelX, labelY) {
+    /* ChartJS version 3.7.1*/
 
     if (!canvasObject) return;
 
@@ -184,6 +185,118 @@ function getChart(canvasObject, dataX, dataY, labelX, labelY) {
     });
 }
 
+function getChartV2(canvasObject, dataX, dataY, labelX, labelY) {
+    /* ChartJS version 2.9.4*/
+    const chartConfig = getChartsConfig();
+
+    new Chart(canvasObject, {
+        type: 'bar',
+        data: {
+            labels: dataX,
+            datasets: [{
+                label: '',
+                data: dataY,
+                backgroundColor: chartConfig.bars.color,
+                barPercentage: chartConfig.bars.barPercentage,
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            showAllTooltips: true,
+            tooltips: {
+                enabled: false,
+            },
+            legend: {
+                display: false
+            },
+            layout: {
+                padding: {
+                    top: 41
+                }
+            },
+            scales: {
+                xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: labelX,
+                        fontFamily: chartConfig.font.family,
+                        fontSize: chartConfig.font.size,
+                        lineHeight: chartConfig.font.lineHeight,
+                        fontColor: chartConfig.axis.x.labelsColor,
+                        padding: chartConfig.axis.x.padding
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
+                    },
+                    ticks: {
+                        fontFamily: chartConfig.font.family,
+                        fontSize: chartConfig.font.size,
+                        lineHeight: chartConfig.font.lineHeight,
+                        fontColor: chartConfig.axis.x.ticksColor,
+                    }
+                }],
+                yAxes: [{
+                    beginAtZero: false,
+                    drawBorder: false,
+                    scaleLabel: {
+                        display: true,
+                        labelString: labelY,
+                        fontFamily: chartConfig.font.family,
+                        fontSize: chartConfig.font.size,
+                        lineHeight: chartConfig.font.lineHeight,
+                        fontColor: chartConfig.axis.y.labelsColor,
+                        padding: chartConfig.axis.y.padding
+                    },
+                    ticks: {
+                        fontFamily: chartConfig.font.family,
+                        fontSize: chartConfig.font.size,
+                        lineHeight: chartConfig.font.lineHeight,
+                        fontColor: chartConfig.axis.y.ticksColor,
+                        callback: function callback(val) {
+                            return '$' + val + 'k';
+                        }
+                    }
+                }]
+            },
+
+            "hover": {
+                "animationDuration": 0
+            },
+            "animation": {
+                "duration": 1,
+                "onComplete": function() {
+                    let chartInstance = this.chart,
+                        ctx = chartInstance.ctx;
+
+                    ctx.font = Chart.helpers.fontString(
+                        chartConfig.dataLabels.font.size,
+                        chartConfig.dataLabels.font.weight,
+                        chartConfig.dataLabels.font.family,
+
+                    );
+
+                    ctx.fillStyle = chartConfig.dataLabels.color;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'bottom';
+
+                    this.data.datasets.forEach(function(dataset, i) {
+                        let meta = chartInstance.controller.getDatasetMeta(i);
+
+                        meta.data.forEach(function(bar, index) {
+                            let data = '$' + dataset.data[index].trim() + 'k';
+
+                            ctx.fillText(data, bar._model.x, bar._model.y - chartConfig.dataLabels.offset);
+                        });
+                    });
+                }
+            },
+            events: []
+        },
+    });
+}
+
 function getCharts() {
     const chartsCanvas = document.getElementsByClassName('chart-section__canvas');
 
@@ -205,7 +318,7 @@ function getCharts() {
                             : '';
 
             if ( $dataX && $dataY) {
-                getChart( chartsCanvas[$i], $dataX, $dataY, $labelX, $labelY )
+                getChartV2( chartsCanvas[$i], $dataX, $dataY, $labelX, $labelY )
             }
         }
     }
