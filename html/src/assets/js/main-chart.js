@@ -114,6 +114,11 @@ function getChart(canvasObject, dataX, dataY, labelX, labelY) {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    top: 41
+                }
+            },
             scales: {
                 x: {
                     grid: {
