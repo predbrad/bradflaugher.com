@@ -150,11 +150,19 @@ function images() {
         .pipe(src(path.src.img))
         .pipe(
             imageMin([
-                imageMin.gifsicle({ interlaced: true }),
-                imageMin.mozjpeg({ quality: 95, progressive: true }),
-                imageMin.optipng({ optimizationLevel: 3 }),
+                imageMin.gifsicle(
+                    { interlaced: true }
+                ),
+                imageMin.mozjpeg(
+                    { quality: 75, progressive: true }
+                ),
+                imageMin.optipng(
+                    { optimizationLevel: 5 }
+                ),
                 imageMin.svgo({
-                    plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+                    plugins: [
+                        { removeViewBox: true }, { cleanupIDs: false }
+                    ],
                 }),
             ])
         )
