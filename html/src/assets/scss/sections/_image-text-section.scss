@@ -76,7 +76,7 @@
         }
 
         @include breakpoint-xs-max {
-          left: $fluidBlocksPaddingXS;
+          padding: 0 $fluidBlocksPaddingXS;
 
           max-width: unset;
         }
