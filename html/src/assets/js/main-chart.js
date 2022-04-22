@@ -39,11 +39,8 @@ function getChartsConfig() {
                     family: globalValues.fontFamily,
                     size: 12,
                     weight: globalValues.fontWeight,
-                    lineHeight: 1.333333333
                 },
                 color: globalValues.dataLabelsColor,
-                anchor: 'end',
-                align: 'top',
                 offset: 4
             }
         }
@@ -89,104 +86,7 @@ function getChartsConfig() {
     return $output
 }
 
-function getChartV3(canvasObject, dataX, dataY, labelX, labelY) {
-    /* ChartJS version 3.7.1*/
-
-    if (!canvasObject) return;
-
-    const chartObject = canvasObject.getContext('2d');
-
-    const chartConfig = getChartsConfig();
-
-    new Chart(chartObject, {
-        type: 'bar',
-        data: {
-            labels: dataX,
-            datasets: [{
-                label: false,
-                backgroundColor: chartConfig.bars.color,
-                barPercentage: chartConfig.bars.barPercentage,
-                data: dataY,
-            }]
-        },
-        plugins: [
-            ChartDataLabels
-        ],
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            layout: {
-                padding: {
-                    top: 41
-                }
-            },
-            scales: {
-                x: {
-                    grid: {
-                        display: false,
-                        drawBorder: false
-                    },
-                    title: {
-                        display: true,
-                        text: labelX,
-                        color: chartConfig.axis.x.labelsColor,
-                        font: chartConfig.font,
-                        padding: chartConfig.axis.x.padding
-                    },
-                    ticks: {
-                        color: chartConfig.axis.x.ticksColor,
-                        font: chartConfig.font,
-                    }
-                },
-                y: {
-                    beginAtZero: false,
-                    drawBorder: false,
-                    title: {
-                        display: true,
-                        text: labelY,
-                        color: chartConfig.axis.y.labelColor,
-                        font: chartConfig.font,
-                        padding: chartConfig.axis.y.padding
-                    },
-                    ticks: {
-                        color: chartConfig.axis.y.ticksColor,
-                        font: chartConfig.font,
-                        callback: function callback(val) {
-                            return '$' + val + 'k';
-                        }
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false
-                },
-                title: {
-                    display: false
-                },
-                tooltip: {
-                    enabled: false
-                },
-                datalabels: {
-                    font: chartConfig.dataLabels.font,
-                    color: chartConfig.dataLabels.color,
-                    anchor: chartConfig.dataLabels.anchor,
-                    align: chartConfig.dataLabels.align,
-                    offset: chartConfig.dataLabels.offset,
-                    formatter: function( val ) {
-                        const $str = val.trim();
-
-                        return '$' + $str + 'k';
-                    },
-                }
-            },
-            events: [],
-        },
-    });
-}
-
-function getChartV2(canvasObject, dataX, dataY, labelX, labelY) {
-    /* ChartJS version 2.9.4*/
+function getChart(canvasObject, dataX, dataY, labelX, labelY) {
     const chartConfig = getChartsConfig();
 
     new Chart(canvasObject, {
@@ -318,7 +218,7 @@ function getCharts() {
                             : '';
 
             if ( $dataX && $dataY) {
-                getChartV2( chartsCanvas[$i], $dataX, $dataY, $labelX, $labelY )
+                getChart( chartsCanvas[$i], $dataX, $dataY, $labelX, $labelY )
             }
         }
     }
@@ -327,7 +227,3 @@ function getCharts() {
 document.addEventListener('DOMContentLoaded', function () {
     getCharts();
 })
-
-window.addEventListener('resize',function() {
-    // getCharts();
-});
