@@ -1,6 +1,14 @@
 # bradflaugher.com
 design and source-code for bradflaugher.com
 
+## TODOs
+
+* fix copy on website
+* add privacy policy (get from rocketlawyer)
+* fix stuff in LEGAL.md
+* confirm links
+
+
 # Pages
 
 ## Homepage
