@@ -96,7 +96,7 @@ a {
 .main {
   min-height: 380px;
 
-  section {
+  & > section, & > div {
     margin-bottom: 230px;
 
     @include breakpoint-md-max {

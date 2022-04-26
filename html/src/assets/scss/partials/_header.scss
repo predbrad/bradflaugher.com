@@ -69,6 +69,7 @@
 
     @include breakpoint-sm-max {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
 
@@ -128,6 +129,11 @@
 
       &:not(:last-child) {
         margin-right: 10px;
+
+        @include breakpoint-sm-max {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
       }
     }
   }

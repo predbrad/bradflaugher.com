@@ -11,9 +11,9 @@
                 <span class="close-element--right"></span>
             </div>
             <div id="menu-panel" class="header__menu-panel">
-                <div class="header__menu header__menu--desktop">
+                <div class="header__menu">
                     {{#each menu.header}}
-                        <a class="header__menu-item header__menu--desktop" href="{{global.siteUrl}}/{{ this.page }}">{{ this.label }}</a>
+                        <a class="header__menu-item" href="{{global.siteUrl}}/{{ this.page }}">{{ this.label }}</a>
                     {{/each}}
                 </div>
                 <div class="header__images-list">
