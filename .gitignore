@@ -128,3 +128,5 @@ dmypy.json
 .pyre/
 
 .idea/*
+
+html/node_modules/*
