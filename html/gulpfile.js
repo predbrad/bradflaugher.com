@@ -6,13 +6,15 @@ const path = {
         html: distPath + '/',
         css: distPath + '/css/',
         js: distPath + '/js/',
-        img: distPath + '/img/'
+        img: distPath + '/img/',
+        fonts: distPath + '/fonts/',
     },
     src: {
         html: srcPath + 'views/pages/**/*.html',
         css: srcPath + 'assets/scss/styles.scss',
         js: srcPath + 'assets/js/**/*.js',
-        img: srcPath + 'assets/img/**/*.{jpg,png,svg,gif,ico,webp}'
+        img: srcPath + 'assets/img/**/*.{jpg,png,svg,gif,ico,webp}',
+        fonts: srcPath + 'assets/fonts/*.ttf',
     },
 
     watch: {
@@ -50,6 +52,8 @@ const panini = require('panini')
 const babel = require('gulp-babel')
 const imageMin = require('gulp-imagemin')
 const htmlMin = require('gulp-htmlmin');
+const ttf2woff = require('gulp-ttf2woff')
+const ttf2woff2 = require('gulp-ttf2woff2')
 
 function browserSyncF() {
     browserSync.init({
@@ -180,6 +184,16 @@ function images() {
         .pipe(browserSync.stream())
 }
 
+function fonts() {
+    src(path.src.fonts)
+        .pipe(ttf2woff())
+        .pipe(dest(path.build.fonts))
+
+    return src(path.src.fonts)
+        .pipe(ttf2woff2())
+        .pipe(dest(path.build.fonts))
+}
+
 function watchFiles(cb) {
     gulp.watch([path.watch.css], css)
     gulp.watch([path.watch.js], js)
@@ -206,7 +220,8 @@ let build = series(
         js,
         css,
         html,
-        images
+        images,
+        fonts
     )
 )
 let build_prod = series(
@@ -215,7 +230,8 @@ let build_prod = series(
         js,
         css,
         html,
-        images
+        images,
+        fonts
     ),
     htmlMinimize
 )
