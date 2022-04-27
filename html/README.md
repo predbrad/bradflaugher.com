@@ -56,7 +56,7 @@ All code of the site is included in the **HTML** folder.
 ### Project source structure (*src* folder)
 
 In the HTML folder are those subfolders:
-* **assets** - *contains images, scripts and CSS styles*;
+* **assets** - *contains fonts, images, scripts and CSS styles*;
 * **data**  - *contains all main variables, used in the project*;
 * **views**  - *contains source HTML files*.
 
