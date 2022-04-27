@@ -243,10 +243,6 @@ let watch = series(
     browserSyncF
 )
 
-exports.clean = clean
-exports.js = js
-exports.css = css
-exports.html = html
+exports.default = watch
 exports.build = build
 exports.build_prod = build_prod
-exports.default = watch
