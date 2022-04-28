@@ -1,0 +1,129 @@
+/**
+ * Global
+ */
+body {
+  font-family: $font;
+  color: $textColor;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.3125;
+
+  padding-top: 52px;
+
+  @include breakpoint-sm-max {
+    padding-top: 40px;
+
+    font-size: 16px;
+  }
+}
+
+p {
+  margin-top: 0;
+
+  margin-bottom: 18px;
+
+  @include breakpoint-sm-max {
+    margin-bottom: 16px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: $linkColor;
+
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.mark {
+  padding: 0 5px;
+
+  &--yellow {
+    background-color: #E7EA4B;
+  }
+
+  &--no-xs {
+    @include breakpoint-xs-max {
+      background-color: transparent;
+    }
+  }
+}
+
+.no-wrap {
+  white-space: pre;
+  word-wrap: break-word;
+}
+
+.header {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.disabled-scroll {
+  overflow: hidden;
+
+  height: calc(100vh - 52px);
+
+  @include breakpoint-md-max {
+    height: calc(100vh - 40px);
+  }
+}
+
+.section-title {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 86px;
+
+    @include breakpoint-sm-max {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+.main {
+  min-height: 380px;
+
+  & > section, & > div {
+    margin-bottom: 230px;
+
+    @include breakpoint-md-max {
+      margin-bottom: 78px
+    }
+
+    &.images-cols-section {
+      margin-bottom: 260px;
+
+      @include breakpoint-md-max {
+        margin-bottom: 100px
+      }
+    }
+
+    &.stories-section {
+      margin-bottom: 260px;
+
+      @include breakpoint-md-max {
+        margin-bottom: 78px
+      }
+    }
+    &:first-child:not(.main-image-section) {
+      margin-top: 50px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

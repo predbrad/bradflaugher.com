@@ -1,0 +1,26 @@
+<!--Footer-->
+<div class="container-fluid footer__container">
+    <div class="row footer__row">
+        <div class="col-md-6 col-sm-5 col-xs-12  footer__col footer__col--left">
+            <div class="footer-logo__container">
+                <a class="footer-logo" href="{{global.siteUrl}}/">{{global.footerLogoText}}</a>
+            </div>
+            <div class="footer__images-list">
+                <a class="footer__images-list-item" target="_blank" rel="nofollow" href="https://www.linkedin.com/in/bradflaugher/">
+                    <img width="30" height="30" src="{{path.icons}}/linked-in.svg" alt="LinkedIn" rel="preload"/>
+                </a>
+                <a rel="nofollow" class="footer__images-list-item" href="mailto:brad@bradflaugher.com">
+                    <img width="30" height="30" src="{{path.icons}}/mail.svg" alt="Mail" rel="preload" />
+                </a>
+            </div>
+            <div class="footer__menu">
+                {{#each menu.footer}}
+                    <a class="footer__menu-item" href="{{global.siteUrl}}/{{ this.page }}">{{ this.label }}</a>
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-7 col-xs-12  footer__col footer__col--right">
+            <div class="footer-button__container"><a class="button button--light" target="_blank" rel="nofollow" href="https://calendly.com/bradjf">Schedule a meeting</a></div>
+        </div>
+    </div>
+</div>
