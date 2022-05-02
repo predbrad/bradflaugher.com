@@ -27,6 +27,8 @@ design and source-code for bradflaugher.com
 
 # Salary Info 
 
+* [Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey/2021)
+* [Levels.fyi](https://www.levels.fyi)
 * [Glassdoor	$100,586](https://www.glassdoor.com/Salaries/data-engineer-salary-SRCH_KO0,13.htm)
 * [Indeed	$117,234](https://www.indeed.com/career/data-engineer/salaries)
 * [Payscale	$93,261](https://www.payscale.com/research/US/Job=Data_Engineer/Salary)
