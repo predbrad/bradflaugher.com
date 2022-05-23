@@ -2,11 +2,24 @@
 
 ## Building of the project
 
+### Running via docker
+
+- ```cd html```
+- ```sudo docker build -t sitebuilder .```
+- ```sudo docker run -v $(pwd):/app -it --rm -p 5555:80 sitebuilder```
+
+
+### Installing Locally 
+
+
 For the project building you need those tools:
-- [Node JS](https://nodejs.org/uk/)
+- [Node JS](https://nodejs.org/uk/) version 11.15.0 was used for original development
 - [Node package manager (NPM)](https://www.npmjs.com/)
 
 For more info regarding installing Node JS and NPM on macOS, Windows or Linux  you may go to [this site](https://kinsta.com/blog/how-to-install-node-js/).
+
+Install Gulp
+- ```npm install -g gulp-cli``` version 4.0.2 was used for development
 
 ### For building the project source you should do the following steps:
 
