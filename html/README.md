@@ -5,9 +5,8 @@
 ### Running via docker
 
 - ```cd html```
-- ```sudo docker build -t sitebuilder .```
-- ```sudo docker run -v $(pwd):/app -it --rm -p 5555:80 sitebuilder```
-
+- ```sudo sh rundocker.sh```
+- then proceed to ```npm install``` and ```gulp``` in steps below
 
 ### Installing Locally 
 

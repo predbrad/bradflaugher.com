@@ -1,13 +1,11 @@
-FROM node:16
+FROM node:11.15.0
 
 RUN mkdir -p /app
 WORKDIR /app
 
 RUN npm install -g gulp
-COPY ./package.json ./
-COPY ./package-lock.json ./
-RUN npm install
 
-EXPOSE 80
+EXPOSE 3000
+EXPOSE 3001
 
 CMD ["bash"]
