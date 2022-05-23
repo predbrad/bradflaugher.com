@@ -8,7 +8,9 @@ design and source-code for bradflaugher.com
 * add privacy policy (get from rocketlawyer)
 * fix stuff in [LEGAL.md](./LEGAL.md)
 * confirm links
-
+* Add competitor rates
+* Add application page
+* Add 1:1 Mentoring links
 
 ## Links for header/footer
 
