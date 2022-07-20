@@ -1,14 +1,26 @@
 {
-  "header" : [
-    {
-      "label" : "bootcamp",
-      "page" : "bootcamp.html"
-    }
-  ],
-  "footer" : [
-    {
-      "label" : "privacy",
-      "page" : "privacy.html"
-    }
-  ]
+	"header" : [
+		{
+			"label" : "bootcamp",
+			"page" : "bootcamp.html"
+		},
+		{
+			"label" : "FAQs",
+			"page" : "faq.html"
+		},
+		{
+			"label" : "apply",
+			"page" : "apply.html"
+		}
+	],
+	"footer" : [
+		{
+			"label" : "privacy",
+			"page" : "privacy.html"
+		},
+		{
+			"label" : "about Brad",
+			"page" : "about.html"
+		}
+	]
 }
