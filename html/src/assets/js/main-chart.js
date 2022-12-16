@@ -138,7 +138,6 @@ function getChart(canvasObject, dataX, dataY, labelX, labelY) {
                     }
                 }],
                 yAxes: [{
-                    beginAtZero: false,
                     drawBorder: false,
                     scaleLabel: {
                         display: true,
@@ -150,6 +149,7 @@ function getChart(canvasObject, dataX, dataY, labelX, labelY) {
                         padding: chartConfig.axis.y.padding
                     },
                     ticks: {
+                    	beginAtZero: true,
                         fontFamily: chartConfig.font.family,
                         fontSize: chartConfig.font.size,
                         lineHeight: chartConfig.font.lineHeight,
