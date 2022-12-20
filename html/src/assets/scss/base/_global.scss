@@ -1,7 +1,16 @@
 /**
  * Global
  */
+
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+	
   font-family: $font;
   color: $textColor;
 
@@ -94,6 +103,7 @@ a {
 }
 
 .main {
+  flex-grow: 1;
   min-height: 380px;
 
   & > section, & > div {
