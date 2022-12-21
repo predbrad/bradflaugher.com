@@ -5,12 +5,8 @@
 			"page" : "bootcamp.html"
 		},
 		{
-			"label" : "FAQs",
-			"page" : "faq.html"
-		},
-		{
-			"label" : "apply",
-			"page" : "apply.html"
+			"label" : "exec-camp",
+			"page" : "executive.html"
 		}
 	],
 	"footer" : [

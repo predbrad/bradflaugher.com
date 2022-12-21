@@ -9,24 +9,13 @@
     <div class="main-image-section__col main-image-section__col--image"> 
 	<picture class="big-image__wrapper">
 	<script type="text/javascript">
-		var imlocation = "{{path.bigImages}}/";
-		function ImageArray (n) {
-			this.length = n;
-			for (var i =1; i <= n; i++) {
-				this[i] = ' '
-			}
-		}
-		image = new ImageArray(5)
-		image[0] = '1.jpg'
-		image[1] = '2.jpg'
-		image[2] = '3.jpg'
-		image[3] = '4.jpg'
-		image[4] = '5.jpg'
+		let imlocation = "{{path.bigImages}}/bootcamp/";
+		image = ['girl_laptops.jpg','girl_screen.jpg','nerd1.jpg','nerd2.jpg','red_laptop.jpg'];
 		function randomimage() {
-			return(image[Math.floor(Math.random() * 5)])
+			return(image[Math.floor(Math.random() * image.length)])
 		}
-		document.write("<source srcset='" + imlocation + "bootcamp/" + randomimage() + "' media='(max-width: 599px)'>");
-		document.write("<img width='768' height='768' class='big-image' src='" + imlocation + "bootcamp/" + randomimage() + "' alt='AI generated image'>");
+		document.write("<source srcset='" + imlocation + randomimage() + "' media='(max-width: 599px)'>");
+		document.write("<img width='768' height='768' class='big-image' src='" + imlocation + randomimage() + "' alt='AI generated image'>");
 	</script>
 
         </picture>
