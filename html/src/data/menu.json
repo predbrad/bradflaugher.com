@@ -1,6 +1,10 @@
 {
 	"header" : [
 		{
+			"label" : "book",
+			"page" : "book.html"
+		},
+		{
 			"label" : "bootcamp",
 			"page" : "bootcamp.html"
 		},
