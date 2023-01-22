@@ -7,10 +7,6 @@
 		{
 			"label" : "bootcamp",
 			"page" : "bootcamp.html"
-		},
-		{
-			"label" : "exec-camp",
-			"page" : "executive.html"
 		}
 	],
 	"footer" : [
