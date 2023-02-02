@@ -3,10 +3,15 @@
 design and source-code for bradflaugher.com
 
 
-## Links 
+## Building the Site
 
-* [Angel.co](https://angel.co/s/esposito-flaugher/5zTWA)
-* [Linkedin](https://www.linkedin.com/in/bradflaugher/)
-* [Medusa (Github)](https://github.com/predbrad/medusa)
-* [Calendly](https://calendly.com/bradjf)
+* ```cd html```
+* ```sh rundocker.sh```
+* ```gulp``` to test 
+* or ```gulp build_prod``` to build prod
+
+## Deploying the site
+
+* from the ```html``` folder
+* ```sh deploy_prod.sh```
 
