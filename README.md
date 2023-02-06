@@ -23,7 +23,7 @@ There are many guides online for this, try googling "setup s3 hosting and cloudf
 * ```gulp``` to test locally  
 * or ```gulp build_prod``` to build prod to ```dist folder```
 
-## Deploying the main site site
+## Deploying the main site 
 
 * from the ```html``` folder
 * ```sh deploy_prod.sh```
