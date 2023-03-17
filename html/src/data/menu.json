@@ -1,19 +1,11 @@
 {
 	"header" : [
-		{
-			"label" : "book",
-			"page" : "book.html"
-		},
+	],
+	"footer" : [
 		{
 			"label" : "bootcamp",
 			"page" : "bootcamp.html"
 		},
-        {
-            "label" : "store",
-            "page" : "store.html"
-        }
-	],
-	"footer" : [
 		{
 			"label" : "privacy",
 			"page" : "privacy.html"
