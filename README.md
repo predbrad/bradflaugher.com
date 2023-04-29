@@ -2,6 +2,18 @@
 
 source code for [bradflaugher.com](https://bradflaugher.com)
 
+## TODOs
+
+* [ ] Good Example (https://www.reidblackman.com/)[https://www.reidblackman.com/]
+* [ ] Add youtube channel link, content guide
+* [ ] Top line links are "Solutions" and "Teaching"
+* [ ] Update bootcamp guide for 2023, update income guidance
+* [ ] Add private tutoring links 
+* [ ] Solutions page setup
+* [ ] Solutions page cost comparison, Stack overflow dev survey, Office space, Licenses, Security, Tech Debt Cost etc...
+* [ ] Mention copilot productivity multiplier
+* [ ] Add books and videos to shop
+
 ## Setup s3 and cloudfront in AWS with https
 
 There are many guides online for this, try googling "setup s3 hosting and cloudfront in aws" or use the guides below. If you find one that is amazing and clear, please submit a PR.
