@@ -1,18 +1,22 @@
 {
 	"header" : [
+        {
+            "label" : "solutions",
+            "page" : "solutions.html"
+        },
+        {
+            "label" : "training",
+            "page" : "bootcamp.html"
+        }
 	],
 	"footer" : [
 		{
-			"label" : "bootcamp",
-			"page" : "bootcamp.html"
+			"label" : "work with Brad",
+			"page" : "executive.html"
 		},
 		{
-			"label" : "privacy",
-			"page" : "privacy.html"
-		},
-		{
-			"label" : "about Brad",
-			"page" : "about.html"
+			"label" : "apply for bootcamp",
+			"page" : "apply.html"
 		}
 	]
 }
