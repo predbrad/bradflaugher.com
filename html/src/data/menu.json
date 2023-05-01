@@ -17,6 +17,10 @@
 		{
 			"label" : "apply for bootcamp",
 			"page" : "apply.html"
-		}
+		},
+        {
+            "label" : "buy 'AI Harmony'",
+            "page" : "book.html"
+        }
 	]
 }
