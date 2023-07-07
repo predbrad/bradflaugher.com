@@ -1,8 +1,7 @@
 #!/bin/bash
 # must be ran from inside 'html' folder
 
-# don't uncomment this, node_modules isn't committed anyway
-# sudo rm -rf node_modules
+sudo rm -rf node_modules
 
 read -r -p "Do you want to rebuild the docker container? [Y/n] " input
 
