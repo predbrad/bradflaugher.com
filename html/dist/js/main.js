@@ -9,19 +9,15 @@ function toggleClass(element, className) {
     }
   }
 }
-
 function isViewPortMaxWidth(width) {
   var viewportWidth;
-
   if (document.compatMode === 'BackCompat') {
     viewportWidth = document.body.clientWidth;
   } else {
     viewportWidth = document.documentElement.clientWidth;
   }
-
   return viewportWidth <= width;
 }
-
 function hamburgerButtonClick() {
   var body = document.getElementById('body');
   var menuContainer = this.parentElement;
@@ -30,15 +26,12 @@ function hamburgerButtonClick() {
   toggleClass(menuContainer, openedMenuClassName);
   toggleClass(body, disableScrollClassName);
 }
-
 function correctImageSectionPaddings() {
   var imageTextSections = document.getElementsByClassName('image-text-section');
-
   if (imageTextSections.length > 0) {
     if (isViewPortMaxWidth(1269)) {
       for (var $i = 0; $i < imageTextSections.length; $i++) {
         var $titleElems = imageTextSections[$i].getElementsByClassName('title');
-
         if ($titleElems.length > 0) {
           var $titleHeight = $titleElems[0].offsetHeight;
           imageTextSections[$i].style.paddingTop = $titleHeight + 'px';
@@ -51,14 +44,11 @@ function correctImageSectionPaddings() {
     }
   }
 }
-
 document.addEventListener('DOMContentLoaded', function () {
   var hamburgerButton = document.getElementById('hamburger-button');
-
   if (hamburgerButton) {
     hamburgerButton.addEventListener("click", hamburgerButtonClick, false);
   }
-
   correctImageSectionPaddings();
 });
 window.addEventListener('resize', function (event) {

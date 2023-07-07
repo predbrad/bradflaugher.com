@@ -40,7 +40,7 @@ const browserSync = require('browser-sync')
 
 const fileInclude = require('gulp-file-include')
 const del = require('del')
-const scss = require('gulp-sass')
+const scss = require('gulp-sass')(require('sass')); 
 const autoprefixer = require('gulp-autoprefixer')
 const group_media = require('gulp-group-css-media-queries')
 const clean_css = require('gulp-clean-css')

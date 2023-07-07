@@ -20,4 +20,4 @@ case $input in
             ;;
 esac
 
-sudo docker run -v $(pwd):/app -it --rm -p 3000-3001:3000-3001 sitebuilder
+sudo docker run -v $(pwd):/app -v /app/node_modules -it --rm -p 3000-3001:3000-3001 sitebuilder
