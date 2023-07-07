@@ -1,4 +1,4 @@
-FROM node:11.15.0
+FROM node:lts
 
 RUN mkdir -p /app
 WORKDIR /app
@@ -6,7 +6,7 @@ WORKDIR /app
 RUN npm install -g gulp
 
 COPY package.json ./
-RUN npm install -g
+RUN npm install
 
 EXPOSE 3000
 EXPOSE 3001

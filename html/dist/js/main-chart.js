@@ -10,7 +10,6 @@ function getChartsConfig() {
     mobileWidth: 600
   };
   var $output;
-
   if (isViewPortMaxWidth(globalValues.mobileWidth)) {
     $output = {
       font: {
@@ -83,10 +82,8 @@ function getChartsConfig() {
       }
     };
   }
-
   return $output;
 }
-
 function getChart(canvasObject, dataX, dataY, labelX, labelY) {
   var chartConfig = getChartsConfig();
   new Chart(canvasObject, {
@@ -167,7 +164,7 @@ function getChart(canvasObject, dataX, dataY, labelX, labelY) {
         "duration": 1,
         "onComplete": function onComplete() {
           var chartInstance = this.chart,
-              ctx = chartInstance.ctx;
+            ctx = chartInstance.ctx;
           ctx.font = Chart.helpers.fontString(chartConfig.dataLabels.font.size, chartConfig.dataLabels.font.weight, chartConfig.dataLabels.font.family);
           ctx.fillStyle = chartConfig.dataLabels.color;
           ctx.textAlign = 'center';
@@ -185,24 +182,20 @@ function getChart(canvasObject, dataX, dataY, labelX, labelY) {
     }
   });
 }
-
 function getCharts() {
   var chartsCanvas = document.getElementsByClassName('chart-section__canvas');
-
   if (chartsCanvas.length > 0) {
     for (var $i = 0; $i < chartsCanvas.length; $i++) {
       var $dataX = chartsCanvas[$i].getAttribute('data-x-values') ? chartsCanvas[$i].getAttribute('data-x-values').split(',') : false;
       var $dataY = chartsCanvas[$i].getAttribute('data-y-values') ? chartsCanvas[$i].getAttribute('data-y-values').split(',') : false;
       var $labelX = chartsCanvas[$i].getAttribute('data-x-label') ? chartsCanvas[$i].getAttribute('data-x-label') : '';
       var $labelY = chartsCanvas[$i].getAttribute('data-y-label') ? chartsCanvas[$i].getAttribute('data-y-label') : '';
-
       if ($dataX && $dataY) {
         getChart(chartsCanvas[$i], $dataX, $dataY, $labelX, $labelY);
       }
     }
   }
 }
-
 document.addEventListener('DOMContentLoaded', function () {
   getCharts();
 });
