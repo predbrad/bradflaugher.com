@@ -4,6 +4,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 RUN npm install -g gulp
+RUN npm install -g freeze-package
 
 COPY package.json ./
 RUN npm install
