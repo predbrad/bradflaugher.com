@@ -12,7 +12,7 @@
 
 
 For the project building you need those tools:
-- [Node JS](https://nodejs.org/uk/) version 11.15.0 was used for original development
+- [Node JS](https://nodejs.org/uk/) 
 - [Node package manager (NPM)](https://www.npmjs.com/)
 
 For more info regarding installing Node JS and NPM on macOS, Windows or Linux  you may go to [this site](https://kinsta.com/blog/how-to-install-node-js/).
