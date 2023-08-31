@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <link rel="apple-touch-icon" href="/reading.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
-        /* Hide the first section by default */
         .section1 {
             display: none;
         }
     </style>
     <script>
-        // This function will run once the HTML is fully loaded
         document.addEventListener("DOMContentLoaded", function() {
-            // Get the local hour
             const now = new Date();
             const localHour = now.getHours();
-
-            // Get the user agent string
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-            // Check if the user is on mobile
             const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
+            
+            //document.getElementById("timeDisplay").innerHTML += localHour;  
 
-            // Check if the time is between 5 and 9 AM, or if on Desktop
-            if (localHour >= 5 && localHour < 9 && isMobile  || !isMobile) {
-                // Show the first section
+            if ((localHour >= 5 && localHour < 12 && isMobile) || !isMobile) {
                 document.getElementById("section1").style.display = "block";
             }
         });
     </script>
 </head>
 <body>
+
+<!-- <p id="timeDisplay">Local Hour: </p -->
 
 <!-- First section with an id -->
 <div id="section1" class="section1">
