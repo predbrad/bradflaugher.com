@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Brad's Reading</title>
     <link rel="apple-touch-icon" href="/reading.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .section1 {
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
             display: none;
+            margin-bottom: 20px;
+        }
+        .section a {
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+        /* Mobile styles */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
         }
     </style>
     <script>
@@ -14,8 +50,6 @@
             const localHour = now.getHours();
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
             const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
-            
-            //document.getElementById("timeDisplay").innerHTML += localHour;  
 
             if ((localHour >= 5 && localHour < 12 && isMobile) || !isMobile) {
                 document.getElementById("section1").style.display = "block";
@@ -25,37 +59,43 @@
 </head>
 <body>
 
-<!-- <p id="timeDisplay">Local Hour: </p -->
+<div class="container">
+    <!-- Morning Reading Section -->
+    <div id="section1" class="section">
+        <h1>&#128752; Morning Reading</h1>
+        <a href="https://calendar.google.com/">Calendar</a>
+        <a href="https://www.wunderground.com/weather/us/pa/philadelphia">Philly Weather</a>
+        <a href="https://www.newsminimalist.com/">News Minimalist</a>
+        <a href="https://github.com/trending">Github Trending</a>
+        <a href="https://huggingface.co/">&#129303; Trending</a>
+        <a href="https://cacm.acm.org/news?subject=1">AI News</a>
+        <a href="https://www.linkedin.com/">LinkedIn</a>
+        <a href="https://forum.members.fsf.org/">FSF</a>
+    </div>
 
-<!-- First section with an id -->
-<div id="section1" class="section1">
-    <h1>&#128752;</h1>
-    <a href="https://calendar.google.com/">Calendar</a>
-    <br><a href="https://www.wunderground.com/weather/us/pa/philadelphia">Philly Weather</a>
-    <br><a href="https://www.newsminimalist.com/">News Minimalist</a>
-    <br><a href="https://github.com/trending">Github Trending</a>
-    <br><a href="https://huggingface.co/">&#129303; Trending</a>
-    <br><a href="https://cacm.acm.org/news?subject=1">AI News</a>
-    <br><a href="https://www.linkedin.com/">LinkedIn</a>
-    <br><a href="https://forum.members.fsf.org/">FSF</a>
+    <!-- Hobbies Section -->
+    <div class="section" style="display: block;">
+        <h1>&#x1F60E; Hobbies</h1>
+        <a href="https://clublocker.com/reservations/mobile/#/reserve">RCOP (Real Tennis, Racquets, Squash)</a>
+        <a href="https://penntennis.clubautomation.com/member">Penn (Lawn Tennis)</a>
+        <a href="https://clublocker.com/organizations/13822/reservations/2023-08-28/grid">Specter (Squash)</a>
+        <a href="https://scotlandrun.com/">Scotland Run (Golf)</a>
+        <a href="https://www.camdencounty.com/service/parks/camden-county-driving-range/">Camden Co. Driving Range (Golf)</a>
+        <a href="https://www.amctheatres.com/movies">AMC Theatres</a>
+        <a href="https://www.splitgate.com/">Splitgate</a>
+    </div>
+
+    <!-- Library and Clubs Section -->
+    <div class="section" style="display: block;">
+        <h1>&#x1F3DB; Libraries</h1>
+        <a href="https://www.freelibrary.org/">Free Library</a>
+        <a href="https://franklin.library.upenn.edu/">Penn Library</a>
+        <a href="audible://">Audible App</a>
+        <a href="https://www.audible.com/">Audible.com</a>
+        <a href="https://libbyapp.com">Libby</a>
+    </div>
 </div>
 
-<h1>&#x1F60E;</h1>
-<a href="https://clublocker.com/reservations/mobile/#/reserve">RCOP</a>
-</br><a href="https://penntennis.clubautomation.com/member">Penn Tennis</a>
-</br><a href="https://clublocker.com/organizations/13822/reservations/2023-08-28/grid">Specter Center</a>
-</br><a href="https://scotlandrun.com/">Scotland Run</a>
-</br><a href="https://www.camdencounty.com/service/parks/camden-county-driving-range/">Camden Co Driving Range</a>
-</br><a href="https://www.amctheatres.com/movies">AMC</a>
-</br><a href="https://www.splitgate.com/">Splitgate</a>
-
-<h1>&#x1F3DB;</h1>
-<a href="https://www.freelibrary.org/">Free Library</a> 
-</br><a href="https://catalog.camdencountylibrary.org/">Camden County Library</a>
-</br><a href="https://mblceg2.mainebalsamlibraries.org/eg/opac/home">Maine Libraries</a>
-</br><a href="https://franklin.library.upenn.edu/">Penn Library</a>
-</br><a href="audible://">Audible</a> (<a href="https://www.audible.com/">www</a>)
-</br><a href="https://libbyapp.com">Libby</a>
-
 </body>
-</html> 
+</html>
+
