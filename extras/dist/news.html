@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick News Catchup</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .news-link {
+      background-color: #2196F3;
+      color: white;
+      padding: 12px 16px;
+      text-align: center;
+      border-radius: 8px;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: bold;
+      display: block; /* Ensures each button takes up the full line */
+    }
+    .news-link:hover {
+      background-color: #1976D2;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Quick News</h1>
+  </header>
+
+  <div class="container">
+        <a href="https://www.nytimes.com/" class="news-link">&#128509; US Breaking</a>
+        <a href="https://www.inquirer.com/" class="news-link">&#128276; Philly Breaking</a>
+        <a href="https://www.economist.com/the-world-in-brief" class="news-link">&#127759; World In Brief</a>
+        <a href="https://www.barrons.com/real-time" class="news-link">&#128200; Markets LIVE</a>
+        <a href="https://finance.yahoo.com/quote/NVDA/" class="news-link">&#128201; NVDA</a>
+  </div>
+
+</body>
+</html>
+
