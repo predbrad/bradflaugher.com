@@ -52,7 +52,11 @@
             const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
 
             if ((localHour >= 5 && localHour < 12 && isMobile) || !isMobile) {
-                document.getElementById("section1").style.display = "block";
+                document.getElementById("morning").style.display = "block";
+            }
+            
+            if (!isMobile) {
+                document.getElementById("breaking").style.display = "block"; 
             }
         });
     </script>
@@ -61,8 +65,8 @@
 
 <div class="container">
     <!-- Morning Reading Section -->
-    <div id="section1" class="section">
-        <h1>&#128752; Morning Reading</h1>
+    <div class="section" id="morning">
+        <h1>&#9749; Morning Reading</h1>
         <a href="https://calendar.google.com/">&#128197; Calendar</a>
         <a href="https://www.wunderground.com/weather/us/pa/philadelphia">&#9733; Philly Weather</a>
         <a href="https://www.newsminimalist.com/">&#128240; News Minimalist</a>
@@ -73,6 +77,16 @@
         <a href="https://www.linkedin.com/">&#128100; LinkedIn</a>
         <a href="https://forum.members.fsf.org/">&#127379; FSF</a>
     </div>
+    
+    <div class="section" id="breaking">
+        <h1>&#128680; Breaking News</h1>
+        <a href="https://www.nytimes.com/" class="news-link">&#128509; US Breaking</a>
+        <a href="https://www.inquirer.com/" class="news-link">&#128276; Philly Breaking</a>
+        <a href="https://www.economist.com/the-world-in-brief" class="news-link">&#127759; World In Brief</a>
+        <a href="https://www.barrons.com/real-time" class="news-link">&#128200; Markets LIVE</a>
+        <a href="https://finance.yahoo.com/quote/NVDA/" class="news-link">&#128201; NVDA</a>
+    </div>
+
 
     <!-- Hobbies Section -->
     <div class="section" style="display: block;">
