@@ -46,15 +46,9 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const now = new Date();
-            const localHour = now.getHours();
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
             const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
 
-            if ((localHour >= 5 && localHour < 12 && isMobile) || !isMobile) {
-                document.getElementById("morning").style.display = "block";
-            }
-            
             if (!isMobile) {
                 document.getElementById("breaking").style.display = "block"; 
             }
@@ -65,7 +59,7 @@
 
 <div class="container">
     <!-- Morning Reading Section -->
-    <div class="section" id="morning">
+    <div class="section" id="morning" style="display: block;">
         <h1>&#9749; Morning Reading</h1>
         <a href="https://calendar.google.com/">&#128197; Calendar</a>
         <a href="https://www.wunderground.com/weather/us/pa/philadelphia">&#9733; Philly Weather</a>
@@ -75,7 +69,6 @@
         <a href="https://huggingface.co/">&#129303; Hugging Face Trending</a>
         <a href="https://cacm.acm.org/news?subject=1">&#128064; AI News</a>
         <a href="https://www.linkedin.com/">&#128100; LinkedIn</a>
-        <a href="linkedin://">&#128242; LinkedIn App</a>
         <a href="https://forum.members.fsf.org/">&#127379; FSF</a>
     </div>
     
