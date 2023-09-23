@@ -49,9 +49,9 @@
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
             const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
 
-            if (!isMobile) {
-                document.getElementById("breaking").style.display = "block"; 
-            }
+            //if (!isMobile) {
+            //    document.getElementById("breaking").style.display = "block"; 
+            //}
         });
     </script>
 </head>
@@ -69,7 +69,7 @@
         <a href="https://cacm.acm.org/news?subject=1">&#128064; AI News</a>
     </div>
     
-    <div class="section" id="breaking">
+    <div class="section" id="breaking" style="display: block;">
         <h1>&#128680; Breaking News</h1>
         <a href="https://www.nytimes.com/" class="news-link">&#128509; US Breaking</a>
         <a href="https://www.inquirer.com/" class="news-link">&#128276; Philly Breaking</a>
