@@ -29,7 +29,7 @@
             padding: 20px;
         }
         .section {
-            display: none;
+            display: block;
             margin-bottom: 20px;
         }
         .section a {
@@ -49,9 +49,17 @@
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
             const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
 
-            //if (!isMobile) {
-            //    document.getElementById("breaking").style.display = "block"; 
-            //}
+            if (!isMobile) {
+                    let elements = document.getElementsByClassName("www-link");
+                    for(let i = 0; i < elements.length; i++) {
+                        elements[i].style.display = "inline-block"; 
+                    }
+                } else {
+                    let elements = document.getElementsByClassName("app-link");
+                    for(let i = 0; i < elements.length; i++) {
+                        elements[i].style.display = "inline-block"; 
+                    }
+                }
         });
     </script>
 </head>
@@ -63,24 +71,18 @@
         <h1>&#9749; Morning Reading</h1>
         <a href="https://calendar.google.com/">&#128197; Calendar</a>
         <a href="https://forecast.weather.gov/MapClick.php?lat=39.93611000000004&lon=-75.15263499999998">&#127780;&#65039; Philly Weather</a>
+        <a href="https://www.inquirer.com/">&#128276; Philly Breaking</a>
+        <a href="https://www.economist.com/the-world-in-brief">&#127759; World In Brief</a>
         <a href="https://www.newsminimalist.com/feed">&#128240; News Minimalist</a>
-        <a href="https://github.com/trending">&#128187; GitHub Trending</a>
-        <a href="https://huggingface.co/">&#129303; Hugging Face Trending</a>
         <a href="https://cacm.acm.org/news?subject=1">&#128064; AI News</a>
+        <a href="https://github.com/trending">&#128187; GitHub Trending</a>
+        <a href="https://huggingface.co/">&#129303; Trending</a>
+        <a href="https://robinhood.com" class="www-link" style="display: none;">&#128200; Robinhood</a>
+        <a href="robinhood://" class="app-link" style="display: none;">&#128200; Robinhood</a>
     </div>
     
-    <div class="section" id="breaking" style="display: block;">
-        <h1>&#128680; Breaking News</h1>
-        <a href="https://www.nytimes.com/" class="news-link">&#128509; US Breaking</a>
-        <a href="https://www.inquirer.com/" class="news-link">&#128276; Philly Breaking</a>
-        <a href="https://www.economist.com/the-world-in-brief" class="news-link">&#127759; World In Brief</a>
-        <a href="https://www.barrons.com/real-time" class="news-link">&#128200; Markets LIVE</a>
-        <a href="https://finance.yahoo.com/quote/NVDA/" class="news-link">&#128201; NVDA</a>
-    </div>
-
-
     <!-- Hobbies Section -->
-    <div class="section" style="display: block;">
+    <div class="section">
         <h1>&#x1F60E; Hobbies</h1>
         <a href="https://clublocker.com/reservations/mobile/#/reserve">&#127955; RCOP (Real Tennis, Racquets, Squash)</a>
         <a href="https://penntennis.clubautomation.com/member">&#127934; Penn (Lawn Tennis)</a>
@@ -93,7 +95,7 @@
     </div>
 
     <!-- Library and Clubs Section -->
-    <div class="section" style="display: block;">
+    <div class="section">
         <h1>&#x1F3DB; Libraries</h1>
         <a href="https://www.freelibrary.org/">&#128218; Free Library</a>
         <a href="https://franklin.library.upenn.edu/">&#128213; Penn Library</a>
