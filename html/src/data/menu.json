@@ -1,26 +1,12 @@
 {
 	"header" : [
         {
-            "label" : "solutions",
+            "label" : "outsourcing",
             "page" : "solutions.html"
         },
         {
-            "label" : "training",
+            "label" : "bootcamp",
             "page" : "bootcamp.html"
-        }
-	],
-	"footer" : [
-		{
-			"label" : "work with Brad",
-			"page" : "executive.html"
-		},
-		{
-			"label" : "apply for bootcamp",
-			"page" : "apply.html"
-		},
-        {
-            "label" : "buy 'AI Harmony'",
-            "page" : "book.html"
         }
 	]
 }

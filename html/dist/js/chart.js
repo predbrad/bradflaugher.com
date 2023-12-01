@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 /*!
  * Chart.js v2.9.4
  * https://www.chartjs.org
@@ -3064,7 +3064,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     // user specified callback to fire on each step of the animation
     onAnimationComplete: null // user specified callback to fire when the animation finishes
   });
-
   var core_animation = exports$3;
 
   // DEPRECATIONS
@@ -3857,7 +3856,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       }
     }
   });
-
   var element_line = core_element.extend({
     _type: 'line',
     draw: function draw() {
@@ -4550,7 +4548,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         position: 'bottom',
         id: 'x-axis-0' // need an ID so datasets can reference the scale
       }],
-
       yAxes: [{
         type: 'linear',
         position: 'left',
@@ -5610,7 +5607,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       }
     }
   });
-
   var controller_radar = core_datasetController.extend({
     datasetElementType: elements.Line,
     dataElementType: elements.Point,
@@ -5797,7 +5793,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         title: function title() {
           return ''; // doesn't make sense for scatter since data are formatted as a point
         },
-
         label: function label(item) {
           return '(' + item.xLabel + ', ' + item.yLabel + ')';
         }
@@ -7816,7 +7811,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         }
       }
     },
-
     drawBody: function drawBody(pt, vm, ctx) {
       var bodyFontSize = vm.bodyFontSize;
       var bodySpacing = vm.bodySpacing;
@@ -7881,7 +7875,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       helpers$1.each(vm.afterBody, fillLineOfText);
       pt.y -= bodySpacing; // Remove last body spacing
     },
-
     drawFooter: function drawFooter(pt, vm, ctx) {
       var footer = vm.footer;
       var length = footer.length;
@@ -9135,7 +9128,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       if (angle < -0.5 * Math.PI) {
         angle += 2.0 * Math.PI; // make sure the returned angle is in the range of (-PI/2, 3PI/2]
       }
-
       return {
         angle: angle,
         distance: radialDistanceFromCenter
@@ -9726,7 +9718,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         } else {
           tickString = '0'; // never show decimal places for 0
         }
-
         return tickString;
       },
       logarithmic: function logarithmic(tickValue, index, ticks) {
