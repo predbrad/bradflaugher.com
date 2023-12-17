@@ -57,7 +57,16 @@
         <a href="https://hackyournews.com/">HackYourNews</a>
         <a href="https://github.com/trending">GitHub Trending</a>
         <a href="https://huggingface.co/">&#129303; Trending</a>
-        <a href="https://linkedin.com">Linkedin</a> 
+        <script>
+            if (navigator.userAgent.match(/mobile|android|iphone|ipad|ipod/i)) {
+                // Display LinkedIn app link for mobile devices
+                document.write('<a href="linkedin://">LinkedIn</a>');
+            } else {
+                // Display regular web link for desktop browsers
+                document.write('<a href="https://www.linkedin.com/">LinkedIn</a>');
+            }
+        </script>
+
         <a href="https://forecast.weather.gov/MapClick.php?lat=39.93611000000004&lon=-75.15263499999998">Philly Weather</a>
     </div>
     
