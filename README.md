@@ -3,13 +3,7 @@
 source code for [bradflaugher.com](https://bradflaugher.com)
 
 # Brad's TODOs
-* Remove unneccessary js, images etc from repo
-* Remove old stuff from s3 bucket
-* Refactor index.html (get inspired by Reid's design https://www.reidblackman.com/)
-* Add ACM or FSF badges? 
-* Steal ideas from CV project https://github.com/BartoszJarocki/cv
-* Improve metadata of all pages
-
+* Improve metadata and social images for all pages, including redirects
 
 # How to use this yourself
 
