@@ -26,4 +26,4 @@ There are many guides online for this, try googling or asking an LLM "how to set
 
 ## Deploying via github actions to s3
 
-* see the [```.github/workflows```](./github/workflows] folder for how this is done.
+* see the [```.github/workflows```](./github/workflows) folder for how this is done.
